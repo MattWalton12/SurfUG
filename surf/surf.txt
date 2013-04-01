@@ -1,0 +1,14 @@
+"Gamemode"
+{
+	"title"		Surf
+	"version"	"1"
+	"menusystem"	"1"
+
+	"author_name"	"Matt W"
+	"author_email"	""
+	"author_url"	""
+	
+	"icon"		""
+	"info"		""
+	"hide"		"0"
+}
