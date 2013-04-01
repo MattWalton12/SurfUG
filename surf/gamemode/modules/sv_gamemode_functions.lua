@@ -143,6 +143,15 @@ function GM:PlayerSelectSpawn(ply)
 	if (#spawns > 0) then
 		return table.Random(spawns)
 	else
-		return self.BaseClass.PlayerSelectSpawn(ply)
+		return self.BaseClass:PlayerSelectSpawn(ply)
 	end
 end
+
+function GM:EntityTakeDamage(ent, dmginfo)
+	if IsValid(ent) and ent:IsPlayer() and dmginfo:IsFallDamage() then
+		dmginfo:ScaleDamage(0.2)
+	end
+
+	return self.BaseClass:EntityTakeDamage(ent, dmginfo)
+end
+	

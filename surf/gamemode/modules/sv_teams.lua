@@ -197,20 +197,13 @@ concommand.Add("surf_prevspectate", function(ply)
 	surf.updateSpectatorState(ply, true)
 end)
 
-
+/*
  -- My debug functions
-concommand.Add("setbotteam", function()
+concommand.Add("teamtest", function()
 	for k,v in pairs(player.GetAll()) do
 		if v:IsBot() then
 			surf.setTeam(v, surf.TEAM_RED)
 		end
-	end
-end)
-
-/*
-concommand.Add("killred", function()
-	for k,v in pairs(team.GetPlayers(surf.TEAM_RED)) do
-		v:Kill()
 	end
 end)
 
