@@ -198,8 +198,8 @@ concommand.Add("surf_prevspectate", function(ply)
 end)
 
 
-/* -- My debug functions
-concommand.Add("teamtest", function()
+ -- My debug functions
+concommand.Add("setbotteam", function()
 	for k,v in pairs(player.GetAll()) do
 		if v:IsBot() then
 			surf.setTeam(v, surf.TEAM_RED)
@@ -207,6 +207,7 @@ concommand.Add("teamtest", function()
 	end
 end)
 
+/*
 concommand.Add("killred", function()
 	for k,v in pairs(team.GetPlayers(surf.TEAM_RED)) do
 		v:Kill()
